@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     home-manager
+    gh
     texlive.combined.scheme-full
   ];
 
