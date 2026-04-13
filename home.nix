@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     home-manager
     gh
+    jdk
     texlive.combined.scheme-full
   ];
 
