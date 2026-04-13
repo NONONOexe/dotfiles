@@ -10,6 +10,11 @@
     gh
     jdk
     texlive.combined.scheme-full
+    uv
+  ];
+
+  home.sessionPath = [
+    "$HOME/.local/bin"
   ];
 
   programs.bash = {
