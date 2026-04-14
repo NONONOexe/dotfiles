@@ -5,6 +5,12 @@
   home.homeDirectory = "/home/nononoexe";
   home.stateVersion = "26.05";
 
+  imports = [
+    ./modules/git.nix
+    ./modules/neovim.nix
+    ./modules/shell.nix
+  ];
+
   home.packages = with pkgs; [
     home-manager
     gh
@@ -12,31 +18,4 @@
     texlive.combined.scheme-full
     uv
   ];
-
-  home.sessionPath = [
-    "$HOME/.local/bin"
-  ];
-
-  programs.bash = {
-    enable = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
-
-  programs.git = {
-    enable = true;
-    settings = {
-      user.name = "Keisuke ANDO";
-      user.email = "ando_k@iwate-pu.ac.jp";
-    };
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
 }
-
