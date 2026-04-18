@@ -17,5 +17,6 @@
     jdk
     texlive.combined.scheme-full
     uv
+    yazi
   ];
 }
