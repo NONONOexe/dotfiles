@@ -7,6 +7,10 @@
 
   programs.bash = {
     enable = true;
+    shellAliases = {
+      hms = "home-manager switch --flake ~/dotfiles#nononoexe";
+      cls = "clear";
+    };
   };
 
   programs.direnv = {
