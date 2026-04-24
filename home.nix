@@ -18,5 +18,6 @@
     texlive.combined.scheme-full
     uv
     yazi
+    zip
   ];
 }
