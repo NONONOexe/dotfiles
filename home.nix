@@ -16,6 +16,7 @@
     gh
     jdk
     texlive.combined.scheme-full
+    unzip
     uv
     yazi
     zip
