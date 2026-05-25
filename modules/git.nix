@@ -6,13 +6,11 @@
     settings = {
       user.name = "Keisuke ANDO";
       user.email = "ando_k@iwate-pu.ac.jp";
-      commit.template = "~/.config/git/commit-template";
       core.editor = "nvim";
-      url = {
-        "git@github.com:" = {
-	  insteadOf = "https://github.com/";
-	};
-      };
+      init.defaultBranch = "main";
+      commit.template = "~/.config/git/commit-template";
+      push.autoSetupRemote = true;
+      url."git@github.com:".insteadOf = "https://github.com/";
     };
   };
 
