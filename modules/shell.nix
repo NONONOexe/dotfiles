@@ -25,9 +25,8 @@
     nix-direnv.enable = true;
   };
 
-  programs.oh-my-posh = {
+  programs.starship = {
     enable = true;
     enableBashIntegration = true;
-    settings = builtins.fromJSON (builtins.readFile ./myconfig.omp.json);
   };
 }
