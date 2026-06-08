@@ -15,8 +15,9 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      hms = "home-manager switch --flake ~/dotfiles#nononoexe";
-      cls = "clear";
+      hms  = "home-manager switch --flake ~/dotfiles#nononoexe";
+      cls  = "clear";
+      open = "explorer.exe";
     };
   };
 
