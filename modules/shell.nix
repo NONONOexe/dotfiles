@@ -29,5 +29,10 @@
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
+    settings = {
+      java = {
+        style = "#fe8019";
+      };
+    };
   };
 }
