@@ -9,6 +9,7 @@
     ./modules/git.nix
     ./modules/neovim.nix
     ./modules/shell.nix
+    ./modules/btop.nix
   ];
 
   home.packages = with pkgs; [
