@@ -14,40 +14,8 @@
       nixd
     ];
 
-    extraConfig = ''
-      " Allow yanking to system clipboard
-      set clipboard=unnamedplus
-
-      " Yank selected text to system clipboard Ctrl+C in visual mode
-      vnoremap <C-c> "+y
-
-      " Allow cursor to wrap to the next/previous line with arrow keys and h/l
-      " - < > : arrow keys in normal/visual mode
-      " - [ ] : arrow keys in insert/replace mode
-      " - h l : h/l keys in normal/visual mode
-      set whichwrap+=<,>,h,l,[,]
-
-      " Disable auto-indent for LaTeX files
-      " - noautoindent  : disable copying indent from the previous line
-      " - nosmartindent : disable systax-based auto-indent
-      " - indentexpr=   : clear any indent function set by plugins
-      autocmd FileType tex setlocal noautoindent nosmartindent indentexpr=
-    '';
-
-    initLua = ''
-      vim.lsp.config('nixd', {})
-      vim.lsp.enable('nixd')
-
-      -- which-key: show available keybindings in a popup
-      local wk = require("which-key")
-      wk.setup()
-      wk.add({
-        { "<leader>r", group = "replace" },
-        { "<leader>rr", function()
-	    local left = vim.api.nvim_replace_termcodes("<Left>", true, false, true)
-	    vim.api.nvim_feedkeys(":%s//gc" .. left .. left .. left, "t", true)
-	  end, desc = "Replace in file (confirm)", mode = "n" },
-      })
-    '';
+    extraConfig = builtins.readFile ./neovim/init.vim;
+    initLua = builtins.readFile ./neovim/init.lua;
   };
 }
+
