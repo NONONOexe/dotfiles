@@ -10,6 +10,7 @@
     ./modules/neovim.nix
     ./modules/shell.nix
     ./modules/btop.nix
+    ./modules/yazi.nix
   ];
 
   home.packages = with pkgs; [
@@ -19,7 +20,6 @@
     texlive.combined.scheme-full
     unzip
     uv
-    yazi
     zip
   ];
 }
