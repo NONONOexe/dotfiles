@@ -1,6 +1,7 @@
+-- nixd: Nix language server
 vim.lsp.config('nixd', {})
 vim.lsp.enable('nixd')
-                                                                               
+
 -- which-key: show available keybindings in a popup
 local wk = require("which-key")
 wk.setup()
@@ -11,4 +12,8 @@ wk.add({
       vim.api.nvim_feedkeys(":%s//gc" .. left .. left .. left, "t", true)
     end, desc = "Replace in file (confirm)", mode = "n" },
 })
+
+-- gruvbox-nvim: color scheme
+require('gruvbox').setup{}
+vim.cmd('colorscheme gruvbox')
 

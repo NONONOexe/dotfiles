@@ -8,6 +8,7 @@
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
       which-key-nvim
+      gruvbox-nvim
     ];
 
     extraPackages = with pkgs; [
