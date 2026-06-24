@@ -1,3 +1,6 @@
+-- Load project-local .nvim.lua
+vim.o.exrc = true
+
 -- nixd: Nix language server
 vim.lsp.config('nixd', {})
 vim.lsp.enable('nixd')
@@ -17,3 +20,17 @@ wk.add({
 require('gruvbox').setup{}
 vim.cmd('colorscheme gruvbox')
 
+-- blink.cmp: completion engine
+require('blink.cmp').setup {
+  keymap = {
+    preset = 'none',
+    ['<C-space>'] = { 'show', 'fallback' },
+    ['<Up>']      = { 'select_prev', 'fallback' },
+    ['<Down>']    = { 'select_next', 'fallback' },
+    ['<Tab>']     = { 'accept', 'fallback' },
+    ['<Esc>']     = { 'cancel', 'fallback' },
+  },
+  sources = {
+    default = { 'lsp', 'buffer', 'path' },
+  },
+}

@@ -9,6 +9,7 @@
       nvim-lspconfig
       which-key-nvim
       gruvbox-nvim
+      blink-cmp
     ];
 
     extraPackages = with pkgs; [
