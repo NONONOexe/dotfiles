@@ -8,6 +8,9 @@ vnoremap <C-c> "+y
 " Show line numbers
 set number
 
+set list
+set listchars=eol:↵
+
 " Indentation
 " Use 2 spaces for indentation
 set tabstop=2
@@ -27,4 +30,3 @@ set whichwrap+=<,>,h,l,[,]
 " - nosmartindent : disable systax-based auto-indent
 " - indentexpr=   : clear any indent function set by plugins
 autocmd FileType tex setlocal noautoindent nosmartindent indentexpr=
-

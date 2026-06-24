@@ -36,4 +36,3 @@ The environment will be automatically activated when you enter the directory.
 ```bash
    hms # alias for: home-manager switch --flake ~/dotfiles#nononoexe
 ```
-
