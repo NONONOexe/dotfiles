@@ -35,4 +35,9 @@
       };
     };
   };
+
+  programs.zoxide = {
+    enable = true;
+  };
 }
+
